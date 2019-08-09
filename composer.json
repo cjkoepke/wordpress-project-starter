@@ -1,0 +1,35 @@
+{
+	"name": "cjkoepke/wordpress-starter-project",
+	"description": "Scaffolding for WordPress projects that want centralized dependency management and code.",
+	"type": "project",
+	"license": "proprietary",
+	"config": {
+		"preferred-install": "dist",
+		"vendor-dir": "mu-plugins/app/vendor"
+	},
+	"extra": {
+		"installer-paths": {
+			"mu-plugins/{$name}/": [
+				"type:wordpress-muplugin"
+			],
+			"plugins/{$name}/": [
+				"type:wordpress-plugin"
+			],
+			"themes/{$name}/": [
+				"type:wordpress-theme"
+			]
+		}
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org"
+		}
+	],
+	"require": {
+		"php": ">=7.0",
+		"composer/installers": "^1.5",
+		"arrilot/dotenv-php": "^1.0",
+		"a7/autoload": "^2"
+	}
+}

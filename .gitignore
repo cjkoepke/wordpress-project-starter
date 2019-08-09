@@ -1,0 +1,52 @@
+# Ignore system files
+*~
+.DS_Store
+.svn
+.cvs
+*.bak
+*.swp
+Thumbs.db
+.sass-cache
+debug.log
+.idea
+node_modules
+.htaccess
+.env
+.env.php
+auth.json
+node_modules
+
+# Ignore Composer Vendor files
+mu-plugins/app/vendor/*
+
+# Wordpress Specific
+uploads/
+blogs.dir/
+upgrade/*
+backup-db/*
+wp-cache-config.php
+cache/*
+cache/supercache/*
+db.php
+
+# Ignore advanced-cache and object-cache for now
+advanced-cache.php
+object-cache.php
+
+# Ignore mu-plugins, themes and plugins by default
+mu-plugins/*
+themes/*
+plugins/*
+
+!mu-plugins/index.php
+!themes/index.php
+
+# Allow mu-plugins
+!mu-plugins/app.php
+!mu-plugins/app/
+
+# Allow Project Theme
+!themes/project-theme
+
+# Ignore Project Theme Build Folder
+themes/project-theme/build-folder
